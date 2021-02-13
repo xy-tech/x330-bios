@@ -2,7 +2,7 @@
 
 ## Rough installation instructions
 1. Download coreboot image from rom folder
-1. Flash it in internally using [flashrom](https://www.flashrom.org/Flashrom) if you're running coreboot: '<flashrom -p internal -w coreboot.rom>'
+1. Flash it in internally using [flashrom](https://www.flashrom.org/Flashrom) if you're running coreboot: `<flashrom -p internal -w coreboot.rom>`
 1. Split it into the 4MB and 8MB binaries
 1. Flash it in with an external clip
 
