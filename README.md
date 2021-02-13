@@ -11,9 +11,14 @@
 * Scripts to simplify compilation for first-time users
 * VBT modification & explanations
 
-## Recommended guide
+## Recommended guide & readings
 * [Has important information on how to get started](https://www.chucknemeth.com/laptop/lenovo-x230/flash-lenovo-x230-coreboot#prepare-coreboot)
+* [Skulls website with a ton of extra info](https://github.com/merge/skulls/tree/master/x230)
 * [My website]()
+
+## Differences between this repo and all the other repos out there
+* The VBT is fully patched which should resolve every single multiple screen problem out there
+* BIOS dumps are provided for easy flashing
 
 ## A short intro of things
 * The X230 has 2 BIOS EEPROM (storage) SPI chips concatenanted (joined) together.
@@ -29,6 +34,8 @@ Follow the instructions in the Linux section but do it under Windows subsystem f
 ## How to flash binary images (for Linux)
 1. Install [flashrom](https://www.flashrom.org/Flashrom)
 1. For internal flashing, run this command: `flashrom -p internal -w image.rom`
+*IMPORTANT: CH341a flasher may have issues flashing the stock bottom chip (8MB) as I've painfully experienced. Internally flash it in coreboot instead of trying to external flash it*
+*Do not attempt to run the coreboot bottom chip (ME neutered, IFD unlocked) with the stock BIOS as it will not load*
 
 # License
 GPLv3 for all scripts etc. Proprietary license for Lenovo stuff. Pls don't sue me. All other stuff belongs to their respective copyright holders
