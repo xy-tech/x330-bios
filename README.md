@@ -31,7 +31,7 @@ Follow the instructions in the Linux section but do it under Windows subsystem f
 1. For internal flashing, run this command: `flashrom -p internal -w image.rom`
 
 # License
-GPLv3 for all scripts etc. Proprietary license for Lenovo stuff. Pls don't sue me. All other 
+GPLv3 for all scripts etc. Proprietary license for Lenovo stuff. Pls don't sue me. All other stuff belongs to their respective copyright holders
 
 # Thanks
 * Alexander Couzens [X330 patch](https://review.coreboot.org/c/coreboot/+/28950) & [VBT patch](https://code.fe80.eu/lynxis/vbtparse)
