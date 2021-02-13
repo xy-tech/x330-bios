@@ -1,0 +1,10 @@
+[package]
+name = "vbtparse"
+version = "0.1.0"
+authors = ["Alexander Couzens <lynxis@fe80.eu>"]
+edition = "2018"
+
+[dependencies]
+quick-error = "1.2"
+byteorder = "1.2"
+
