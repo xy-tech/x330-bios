@@ -26,14 +26,18 @@
 ## How to flash images (for Windows)
 Follow the instructions in the Linux section but do it under Windows subsystem for Linux instead.
 
-May create a bootable ISO with flashrom for Windows users (although if you're advanced enough to play around with BIOS I think Linux should be easy enough to follow).
-
 ## How to flash binary images (for Linux)
 1. Install [flashrom](https://www.flashrom.org/Flashrom)
 1. For internal flashing, run this command: '<flashrom -p internal -w image.rom>'
 
 # License
 GPLv3 for all scripts etc. Proprietary license for Lenovo stuff. Pls don't sue me. All other 
+
+# Thanks
+* Alexander Couzens [X330 patch](https://review.coreboot.org/c/coreboot/+/28950) & [VBT patch](https://code.fe80.eu/lynxis/vbtparse)
+* [\x for BIOS patches](http://paranoid.anal-slavery.com/biosmods.html)
+* [/u/SlowStopper](https://www.reddit.com/r/thinkpad/comments/k6jaie/a_year_in_the_making_hear_my_x330_story/) for figuring out what's the problem
+* Everyone else who made the X230 to what it is today, specifically towards BIOS patching and Coreboot
 
 ### TBD
 Fork 1vyrain and insert a coreboot script so coreboot can be installed painlessly for users for both variants of the machine without external flashing. Not sure if it's useful though as most people who'd install coreboot would also has an external flasher and enough know-how or time to get this working via hardware.
