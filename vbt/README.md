@@ -13,3 +13,4 @@ I've copied the VBT patcher (as his private repo does not enable forking) and mo
 1. Run the script `./vbtparse data.vbt` and an out.vbt will be generated that is fully patched.
 1. Use this VBT in Coreboot by pointing to it during compilation. 
 1. Use this VBT in the stock BIOS by replacing it using [UEFITool](https://github.com/LongSoft/UEFITool) which is documented in the stock folder in this repo.
+1. (OPTIONAL) For stock firmware, [sign the firmware](https://github.com/thrimbor/thinkpad-uefi-sign) to remove 5-beeps on boot (5 beeps means image is modified). 

@@ -3,6 +3,11 @@
 Just flash the top.bin and bottom.bin (or the ME disabled image) and there should not be anymore secondary displays.
 For more explanation on the VBT patch, go to the VBT folder
 
+## What it contains
+* v2.72 BIOS which is the last version before spectre & meltdown patch for improved performance
+* 1vyrain patches (view the exact patch in the .txt patch file)
+* Signed firmware to get rid of beeping on boot
+
 ## Manual BIOS patching (using Linux or WSL)
 1. Download UEFIPatch
 1. Run this command to patch an image `uefipatch bios.img patch.txt -o new_bios.img`
@@ -14,7 +19,7 @@ For more explanation on the VBT patch, go to the VBT folder
 1. Search for `vbt` in text and uncheck unicode.
 1. Click on the raw section at `offset 1h`. 
 1. Replace it with the updated (modified) VBT.
-1. Save the image and flash it into the X230
+1. Save the image and [sign it](https://github.com/thrimbor/thinkpad-uefi-sign) to remove 5-beeps on boot. (5 beeps means image is modified)
 
 ### Credits
 BIOS patches are all hardwork from the community and was downloaded from [here](http://paranoid.anal-slavery.com/biosmods.html). Please refer to the [ThinkPad Subreddit](https://www.reddit.com/r/thinkpad) for more info.
