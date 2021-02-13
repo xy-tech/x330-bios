@@ -27,6 +27,12 @@
 * The stock image stores the actual BIOS portion in the top chip only. 
 * Limiting coreboot (BIOS) to 0x400000 (4MB) means the bottom chip (8MB) is untouched between the stock ROM & Coreboot. This means only the top chip (4MB) needs to be flashed.
 
+## External & internal flashing
+* Generated coreboot and downloaded images are usually 12MB, with the first 8MB as the bottom chip and the last 4MB as the top chip
+* Physical flashing would require the 4MB and 8MB files to be split while an internal flash requires the full 12MB by default
+* To join these 2 files together, run `cat bottom.bin top.bin > bios.rom`
+* To split an image into it's corresponding files, run `dd if=bios.rom of=top.bin bs=1M skip=8` for the top chip and `dd if=bios.rom of=bottom.bin bs=1M count=8` for bottom chip
+* Provided images in this repo are for the convenience of flashing. Join or split them according to what you plan to do.
 
 ## How to flash images (for Windows)
 Follow the instructions in the Linux section but do it under Windows subsystem for Linux instead.
@@ -34,6 +40,7 @@ Follow the instructions in the Linux section but do it under Windows subsystem f
 ## How to flash binary images (for Linux)
 1. Install [flashrom](https://www.flashrom.org/Flashrom)
 1. For internal flashing, run this command: `flashrom -p internal -w image.rom`
+
 *IMPORTANT: CH341a flasher may have issues flashing the stock bottom chip (8MB) as I've painfully experienced. Internally flash it in coreboot instead of trying to external flash it*
 *Do not attempt to run the coreboot bottom chip (ME neutered, IFD unlocked) with the stock BIOS as it will not load*
 

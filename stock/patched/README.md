@@ -4,12 +4,13 @@ Just flash the top.bin and bottom.bin (or the ME disabled image) and there shoul
 For more explanation on the VBT patch, go to the VBT folder
 
 ## What it contains
-* v2.72 BIOS which is the last version before spectre & meltdown patch for improved performance
-* 1vyrain patches (view the exact patch in the .txt patch file)
+* Fully patched, VBT replaced, signed v2.72 BIOS 
+* v2.72 is the last version before spectre & meltdown patch for improved performance
 * Signed firmware to get rid of beeping on boot
+* 1vyrain patches (view the exact patch in the .txt patch file)
 
 ## Manual BIOS patching (using Linux or WSL)
-1. Download UEFIPatch
+1. Download [UEFIPatch](https://manpages.ubuntu.com/manpages/disco/man1/UEFIPatch.1.html)
 1. Run this command to patch an image `uefipatch bios.img patch.txt -o new_bios.img`
 
 ## VBT patching for stock ROM
