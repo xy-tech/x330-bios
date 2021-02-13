@@ -28,7 +28,7 @@ Follow the instructions in the Linux section but do it under Windows subsystem f
 
 ## How to flash binary images (for Linux)
 1. Install [flashrom](https://www.flashrom.org/Flashrom)
-1. For internal flashing, run this command: `<flashrom -p internal -w image.rom>`
+1. For internal flashing, run this command: `flashrom -p internal -w image.rom`
 
 # License
 GPLv3 for all scripts etc. Proprietary license for Lenovo stuff. Pls don't sue me. All other 

@@ -11,7 +11,7 @@ For more explanation on the VBT patch, go to the VBT folder
 *For more info, read the vbt README.md in this repo.*
 1. Download [UEFITool](https://github.com/LongSoft/UEFITool).
 1. Open the stock image.
-1. Search for `<vbt>` in text and uncheck unicode.
+1. Search for `vbt` in text and uncheck unicode.
 1. Click on the raw section at `<offset 1h>`. 
 1. Replace it with the updated (modified) VBT.
 1. Save the image and flash it into the X230
