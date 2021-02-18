@@ -1,4 +1,4 @@
-# X230 & X330 (modified display) BIOS
+# X330 (modified display X230) BIOS
 ## Content
 
 **Stock BIOS**
@@ -12,13 +12,13 @@
 * VBT modification & explanations
 
 ## Recommended guide & readings
-* [Has important information on how to get started](https://www.chucknemeth.com/laptop/lenovo-x230/flash-lenovo-x230-coreboot#prepare-coreboot)
+* [Important information on how to get started](https://www.chucknemeth.com/laptop/lenovo-x230/flash-lenovo-x230-coreboot#prepare-coreboot)
 * [Skulls website with a ton of extra info](https://github.com/merge/skulls/tree/master/x230)
-* [My website]()
+* [My website (under construction)]()
 
-## Differences between this repo and all the other repos out there
+## Repo highlights
 * The VBT is fully patched which should resolve every single multiple screen problem out there
-* BIOS dumps are provided for easy flashing
+* BIOS dumps (patched stock and coreboot) are provided for easy flashing
 
 ## A short intro of things
 * The X230 has 2 BIOS EEPROM (storage) SPI chips concatenanted (joined) together.
@@ -42,7 +42,10 @@ Follow the instructions in the Linux section but do it under Windows subsystem f
 1. For internal flashing, run this command: `flashrom -p internal -w image.rom`
 
 *IMPORTANT: CH341a flasher may have issues flashing the stock bottom chip (8MB) as I've painfully experienced. Internally flash it in coreboot instead of trying to external flash it*
-*Do not attempt to run the coreboot bottom chip (ME neutered, IFD unlocked) with the stock BIOS as it will not load*
+
+*Do not attempt to run the coreboot bottom chip (ME neutered, IFD unlocked) with the stock BIOS as it will not load.*
+
+*Do not attempt to just IFD unlock the bottom chip with stock BIOS as it will not load either. In short, the bottom chip has to be the untouched stock bottom chip in order for stock BIOS (patched/not patched) to work.*
 
 # License
 GPLv3 for all scripts etc. Proprietary license for Lenovo stuff. Pls don't sue me. All other stuff belongs to their respective copyright holders
@@ -53,5 +56,7 @@ GPLv3 for all scripts etc. Proprietary license for Lenovo stuff. Pls don't sue m
 * [/u/SlowStopper](https://www.reddit.com/r/thinkpad/comments/k6jaie/a_year_in_the_making_hear_my_x330_story/) for figuring out what's the problem
 * Everyone else who made the X230 to what it is today, specifically towards BIOS patching and Coreboot
 
-### TBD
+### To-do
 Fork 1vyrain and insert a coreboot script so coreboot can be installed painlessly for users for both variants of the machine without external flashing. Not sure if it's useful though as most people who'd install coreboot would also has an external flasher and enough know-how or time to get this working via hardware.
+
+Build a simple bootable flashrom utility for easy BIOS flashing.

@@ -15,9 +15,10 @@
 
 ## More information
 * The extra folder contains all the required files for an X330 build.
+* All the files from the extra folder are extracted from my personal X330 BIOS.
 * The dotconfig file contains configs necessary to build Coreboot.
 * The VBT is modified to remove the internal display in Windows.
 * This is based on tianocore which does not have backwards support for MBR/BIOS OS.
 * This build uses libgfxinit as the graphics init with no VGA blobs.
 * The Intel ME is neutered for this build. Might affect hackintosh installs although I've not done any testing on it.
-* This build is also 4MB which is suitable for 1vyrain installs directly without any hardware flash.
+* This build is also 4MB which is suitable for 1vyrain installs directly without any hardware flash. Fully tested with 1vyrain.
