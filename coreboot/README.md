@@ -8,7 +8,7 @@
 
 ## Rough instructions on how to build
 1. Clone Coreboot repository to local
-1. Copy extra and dotconfig into the root of the Coreboot folder
+1. Copy extra and dotconfig into the Coreboot root folder
 1. Rename dotconfig to .config
 1. Cherry pick the FHD patch
 1. Build the image
@@ -20,5 +20,6 @@
 * The VBT is modified to remove the internal display in Windows.
 * This is based on tianocore which does not have backwards support for MBR/BIOS OS.
 * This build uses libgfxinit as the graphics init with no VGA blobs.
-* The Intel ME is neutered for this build. Might affect hackintosh installs although I've not done any testing on it.
+* The Intel ME is neutered for this build. Might affect hackintosh installs and battery life although I've not done any testing on it.
 * This build is also 4MB which is suitable for 1vyrain installs directly without any hardware flash. Fully tested with 1vyrain.
+* The boot resolution is set to 1366*768. Feel free to modify this based on the display resolution of your display. 

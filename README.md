@@ -14,7 +14,7 @@
 ## Recommended guide & readings
 * [Important information on how to get started](https://www.chucknemeth.com/laptop/lenovo-x230/flash-lenovo-x230-coreboot#prepare-coreboot)
 * [Skulls website with a ton of extra info](https://github.com/merge/skulls/tree/master/x230)
-* [My website (under construction)]()
+* [My website](https://www.xyte.ch/software/x330-support/x330-bios-modification/)
 
 ## Repo highlights
 * The VBT is fully patched which should resolve every single multiple screen problem out there
