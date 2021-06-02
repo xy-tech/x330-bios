@@ -14,7 +14,7 @@
 ## Recommended guide & readings
 * [Important information on how to get started](https://www.chucknemeth.com/laptop/lenovo-x230/flash-lenovo-x230-coreboot#prepare-coreboot)
 * [Skulls website with a ton of extra info](https://github.com/merge/skulls/tree/master/x230)
-* [My website](https://www.xyte.ch/software/x330-support/x330-bios-modification/)
+* [My website](https://www.xyte.ch/support/x330-support/x330-bios/)
 
 ## Repo highlights
 * The VBT is fully patched which should resolve every single multiple screen problem out there
@@ -45,7 +45,7 @@ Follow the instructions in the Linux section but do it under Windows subsystem f
 
 *Do not attempt to run the coreboot bottom chip (ME neutered, IFD unlocked) with the stock BIOS as it will not load.*
 
-*Do not attempt to just IFD unlock the bottom chip with stock BIOS as it will not load either. In short, the bottom chip has to be the untouched stock bottom chip in order for stock BIOS (patched/not patched) to work.*
+*Do not attempt to just IFD unlock the bottom chip with stock BIOS as it will not load either. In short, the bottom chip has to be untouched in order for stock BIOS (patched/not patched) to work.*
 
 # License
 GPLv3 for all scripts etc. Proprietary license for Lenovo stuff. Pls don't sue me. All other stuff belongs to their respective copyright holders
