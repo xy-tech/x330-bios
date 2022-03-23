@@ -8,7 +8,7 @@ For more explanation on the VBT patch, go to the VBT folder
 * v2.77 is the latest BIOS from Lenovo
 * v2.72 is the last version before spectre & meltdown patch for improved performance
 * *v2.60 is the version compatible with 1vyrain and is the recommended patched BIOS for most people*
-* Signed firmware to get rid of beeping on boot
+* Signed firmware to get rid of beeping on boot and to use the TPM chip
 * 1vyrain patches (view the exact patch in the .txt patch file)
 
 ## Manual BIOS patching (using Linux or WSL)
@@ -20,9 +20,9 @@ For more explanation on the VBT patch, go to the VBT folder
 1. Download [UEFITool](https://github.com/LongSoft/UEFITool).
 1. Open the stock image.
 1. Search for `vbt` in text and uncheck unicode.
-1. Click on the raw sections at `offset 1h`. (2 sections at File GUID: 6047B8EC-6D17-45C0-9BCF-63D164B41AB3 and F053B9B5-82F2-4643-A256-CC752CE49058)
+1. Click on the raw sections at `offset 1h`. (2 sections at File GUID: `6047B8EC-6D17-45C0-9BCF-63D164B41AB3` and `F053B9B5-82F2-4643-A256-CC752CE49058`)
 1. Replace both raw sections with the updated (modified) VBT.
-1. Save the image and [sign it](https://github.com/thrimbor/thinkpad-uefi-sign) to remove 5-beeps on boot. (5 beeps means UEFI image is modified)
+1. Save the image and [sign it](https://github.com/thrimbor/thinkpad-uefi-sign) to remove 5-beeps on boot and to use the TPM chip. (5 beeps means UEFI image is modified)
 
 ### Credits
 BIOS patches are all hardwork from the community and was downloaded from [here](http://paranoid.anal-slavery.com/biosmods.html). Please refer to the [ThinkPad Subreddit](https://www.reddit.com/r/thinkpad) for more info.
